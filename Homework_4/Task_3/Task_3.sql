@@ -1,0 +1,5 @@
+CREATE ROLE hr_user WITH LOGIN PASSWORD 'password';
+GRANT SELECT ON Employees TO hr_user;
+
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO hr_user;
+GRANT INSERT , UPDATE ON Employees TO hr_user;
